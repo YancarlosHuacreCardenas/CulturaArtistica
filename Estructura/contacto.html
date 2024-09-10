@@ -1,29 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=    <div class="form-section" id="contacto">
-        <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
 
+        .form-container {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 12px;
+            border-radius: 4px;
+            font-size: 18px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-    <h2>Contáctanos</h2>
-    <form>
-        <label for="name">Nombre:</label><br>
-        <input type="text" id="name" name="name" required><br><br>
+    <div class="form-container">
+        <h2>Contáctanos</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
 
-        <label for="date">Fecha de contacto:</label><br>
-        <input type="date" id="date" name="date" required><br><br>
+            <div class="form-group">
+                <label for="date">Fecha de contacto:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
 
-        <label for="product">Elige tu producto favorito:</label><br>
-        <select id="product" name="product">
-            <option value="rosa">Rosa</option>
-            <option value="lirio">Lirio</option>
-            <option value="tulipan">Tulipán</option>
-        </select><br><br>
+            <div class="form-group">
+                <label for="product">Elige tu producto favorito:</label>
+                <select id="product" name="product" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="rosa">Rosa</option>
+                    <option value="lirio">Lirio</option>
+                    <option value="tulipan">Tulipán</option>
+                </select>
+            </div>
 
-        <button type="submit" class="button">Enviar</button>
-    </form>
-</div>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
 </body>
 </html>
